@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* p::first-letter {
+        color: aqua;
+      }
+
+      p::first-line {
+        color: red;
+      } */
+      span::before {
+        content: ".com";
+        color: red;
+      }
+      div {
+        border: solid 1px #ddd;
+        width: 250px;
+      }
+      div > input[type="text"] {
+        border: none;
+        outline: none;
+      }
+      div > input[type="text"] + span:after {
+        content: "\293D";
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <span>baidubaike</span>
+
+    <div>
+      <input type="text" name="" id="" />
+      <span></span>
+    </div>
+  </body>
+</html>

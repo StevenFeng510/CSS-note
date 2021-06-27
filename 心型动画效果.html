@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>心型动画效果</title>
+    <style>
+      body {
+        margin: 0px;
+        animation: col 6s linear infinite alternate;
+      }
+      .container {
+        height: 500px;
+        width: 500px;
+        margin: 300px auto;
+      }
+      .heart {
+        float: left;
+        width: 200px;
+        height: 200px;
+      }
+      .left,
+      .right {
+        float: left;
+        width: 100px;
+        height: 160px;
+        background: yellow;
+        border-radius: 80px 80px 0 0;
+      }
+      .left {
+        transform: translateX(29px) rotate(-45deg);
+      }
+      .right {
+        transform: translateX(-29px) rotate(45deg);
+      }
+      .heart2 {
+        /*播放动画 绑定动画 名称 时间 匀速 循环 反向 */
+        animation: move 6s linear infinite alternate;
+      }
+      .heart2 .left,
+      .heart2 .right {
+        animation: col 6s linear infinite alternate;
+      }
+      @keyframes move {
+        0% {
+          transform: translateX(0px);
+        }
+        100% {
+          transform: translateX(-400px);
+        }
+      }
+      @keyframes col {
+        0% {
+          background-color: skyblue;
+        }
+
+        50% {
+          background-color: black;
+        }
+
+        100% {
+          background-color: skyblue;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="heart">
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="heart heart2">
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+    </div>
+  </body>
+</html>

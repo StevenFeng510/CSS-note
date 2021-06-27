@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 后代选择器 */
+      /* main article h2,
+      article h1 {
+        color: red;
+      } */
+
+      /* 子元素选择 :选择子元素，不包括孙级及以下元素 */
+      main article > h2 {
+        color: red;
+      }
+
+      /* 兄弟元素选择器 :同级兄弟元素 */
+      article h1 ~ h2 {
+        color: green;
+      }
+
+      /* 后面兄弟元素选择 */
+      /* main article~* */
+    </style>
+  </head>
+  <body>
+    <main>
+      <article>
+        <h1>百度</h1>
+        <aside>
+          <h2>www.baidu.com</h2>
+        </aside>
+        <h2>hahah</h2>
+      </article>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* main > ul li:nth-child(odd) {
+         color: red;
+       } */
+      /* main > ul li:nth-child(-n + 2) {
+         color: red;
+       } */
+      /* article h1:nth-of-type(2) {
+         color: red;
+       } */
+      main > ul li:nth-child(-n + 3):not(:nth-child(3)) {
+        color: red;
+      }
+      article h1:nth-of-type(2) {
+        color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <ul>
+        <li>baidu</li>
+        <li>百度</li>
+        <li>baidu.com</li>
+        <li>www.baidu.com</li>
+      </ul>
+      <article>
+        <h1>百度</h1>
+        <aside>
+          <h2>www.baidu.com</h2>
+        </aside>
+        <h1>hahah</h1>
+      </article>
+    </main>
+  </body>
+</html>
