@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h2 {
+        white-space: pre; /* pre保留空格 */
+      }
+      div {
+        /* 解决文本溢出 */
+        /* word-break: break-all; */
+
+        border: solid 1px #ddd;
+        /* 溢出后的文本进行隐藏 */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- pre标签 保留空格 和换行符-->
+    <h2>bai du.com</h2>
+
+    <div>
+      123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789
+    </div>
+  </body>
+</html>
