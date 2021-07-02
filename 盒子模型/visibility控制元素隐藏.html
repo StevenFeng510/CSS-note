@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      article {
+        padding: 30px;
+        width: 400px;
+        border: solid 1px #ddd;
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        background: red;
+        margin-bottom: 10px;
+      }
+      div:nth-of-type(1) {
+        /* visibility隐藏元素 会保留空间位 */
+        visibility: hidden;
+        /* opacity: 0.5; */
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <div>1</div>
+      <div>2</div>
+    </article>
+  </body>
+</html>

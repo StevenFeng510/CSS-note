@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 相邻元素的纵向外边距会进行合并 */
+      body {
+        padding: 100px;
+      }
+      article {
+        border: solid 1px #ddd;
+        width: 300px;
+        padding: 50px 0;
+      }
+      div {
+        border: solid 1px red;
+        margin-left: -50px;
+        margin-right: -50px;
+        text-align: center;
+      }
+      h2 {
+        border: solid 1px red;
+        margin-bottom: 30px;
+        margin-top: 30px;
+      }
+      h3 {
+        border: solid 1px red;
+        height: 30px;
+      }
+      ul > li {
+        border: solid 1px red;
+        /* 会自动取最大边距 */
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>baidu.com</h2>
+    <h2>bai.com</h2>
+    <h3>bai.com</h3>
+
+    <ul>
+      <li>123</li>
+      <li>123456</li>
+      <li>1234567</li>
+    </ul>
+    <article>
+      <div>baidu,com</div>
+    </article>
+  </body>
+</html>

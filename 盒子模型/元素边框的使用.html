@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 100px;
+      }
+      article {
+        /* 3D凹槽 */
+        border-style: groove;
+        border-width: 20px;
+        border-color: aquamarine;
+        /* 圆角控制 */
+        border-radius: 30px;
+
+        width: 300px;
+      }
+      div {
+        border: solid 1px red;
+        border-radius: 50%;
+        padding: 20px;
+      }
+      div > em {
+        /* border-left: solid 3px gray;
+        padding-left: 10px; */
+        border-bottom: solid 2px red;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <div>baidu,com <em>123456</em></div>
+    </article>
+  </body>
+</html>
