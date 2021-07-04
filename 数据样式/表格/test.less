@@ -1,0 +1,26 @@
+.table {
+  display: table;
+
+  section {
+    &:nth-child(1) {
+      display: table-header-group;
+      background-color: #555;
+      color: white;
+    }
+    &:nth-child(2) {
+      display: table-row-group;
+    }
+    &:nth-child(3) {
+      display: table-footer-group;
+      background: #f3f3f3;
+    }
+    ul {
+      display: table-row;
+      li {
+        display: table-cell;
+        border: solid 1px #ddd;
+        padding: 5px;
+      }
+    }
+  }
+}

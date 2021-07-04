@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* table thead {
+        background: rgb(66, 209, 138);
+      } */
+      /* table tbody tr:first-child {
+        background: rgb(66, 209, 138);
+      } */
+
+      /* 隔行有颜色 */
+      table tbody tr:nth-child(odd) {
+        background: rgb(66, 209, 138);
+        color: wheat;
+      }
+
+      table {
+        background-image: url(../盒子模型/111.jpg);
+      }
+    </style>
+  </head>
+  <body>
+    <table border="1">
+      <thead>
+        <tr>
+          <td>编号</td>
+          <td>标题</td>
+          <td>网址</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>在线</td>
+          <td>123456789</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>开元</td>
+          <td>www.baidu.com</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>实战</td>
+          <td>baidubaike</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

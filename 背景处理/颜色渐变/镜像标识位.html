@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 颜色未指定标识时，颜色会平均分布。 */
+      article {
+        width: 150px;
+        height: 150px;
+        /* background: linear-gradient(90deg, brown 50%, blueviolet 60%); */
+        background: radial-gradient(red 10%, yellow 40%, black 70%);
+      }
+      nav {
+        height: 150px;
+        /* 70%表示中间阀值 */
+        background: linear-gradient(90deg, red, 70%, green);
+      }
+    </style>
+  </head>
+  <body>
+    <nav></nav>
+    <article>
+      <div>baidu.com</div>
+    </article>
+  </body>
+</html>

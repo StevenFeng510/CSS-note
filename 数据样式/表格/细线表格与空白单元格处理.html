@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border: none;
+        /* 细线表格 */
+        border-collapse: collapse;
+        /* 空白单元格处理 */
+        /* empty-cells: hide; */
+      }
+
+      table thead {
+        background: #f3f3f3;
+      }
+
+      /* 表格无边框样式 */
+      table td {
+        border: none;
+        border-right: solid 1px #ddd;
+        border-top: solid 1px #ddd;
+        padding: 10px;
+      }
+      table td:last-child {
+        border-right: none;
+      }
+      table tr:last-child td {
+        border-bottom: solid 1px #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <table border="1">
+      <thead>
+        <tr>
+          <td>编号</td>
+          <td>标题</td>
+          <td>网址</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>在线</td>
+          <td>123456789</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>开元</td>
+          <td>www.baidu.com</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>实战</td>
+          <td>baidubaike</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
