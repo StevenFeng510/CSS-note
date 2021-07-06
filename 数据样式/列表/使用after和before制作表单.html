@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 50px;
+      }
+      .field {
+        position: relative;
+        margin-bottom: 20px;
+      }
+      input {
+        border: none;
+        outline: none;
+        width: 100%;
+        text-align: center;
+        color: #555;
+      }
+
+      .field::after {
+        content: "";
+        background: linear-gradient(
+          to right,
+          white,
+          red,
+          green,
+          blueviolet,
+          white
+        );
+        display: block;
+        height: 2px;
+      }
+
+      .field:hover:before {
+        content: attr(data-help);
+        font-size: 14px;
+        color: #666;
+        position: absolute;
+        top: -13px;
+        text-align: center;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="field" data-help="请输入100字以内的字符">
+      <input type="text" name="" id="" />
+    </div>
+    <div class="field" data-help="请输入100字以内的字符">
+      <input type="text" name="" id="" />
+    </div>
+    <div class="field" data-help="请输入100字以内的字符">
+      <input type="text" name="" id="" />
+    </div>
+  </body>
+</html>

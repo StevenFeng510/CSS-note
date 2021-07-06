@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* main {
+        border: solid 3px black;
+        width: 610px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      div {
+        width: 300px;
+        height: 200px;
+        box-sizing: border-box;
+      } */
+
+      /* 浮动是对后面元素的影响 */
+      /* div:nth-of-type(1) {
+        border: solid 3px red;
+        float: left;
+      }
+
+      div:nth-of-type(2) {
+        background: blue;
+        float: right;
+      } */
+
+      /* 浮动边界不能超过父元素的padding */
+
+      div {
+        height: 200px;
+        width: 200px;
+      }
+
+      div.red {
+        border: solid 2px red;
+        float: left;
+      }
+      div.green {
+        border: solid 2px green;
+        float: right;
+      }
+      div.blue {
+        border: solid 2px blue;
+        background: blue;
+        /* 清除左侧浮动 */
+        /* clear: left; */
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="red"></div>
+      <div class="green"></div>
+      <div class="blue"></div>
+    </main>
+  </body>
+</html>

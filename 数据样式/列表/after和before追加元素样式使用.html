@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* h2::after {
+        content: "baidu";
+        color: green;
+        background-color: blueviolet;
+        padding: 10px 10px;
+        box-shadow: 0 0 5px black;
+      } */
+
+      h2 {
+        position: relative;
+        cursor: pointer;
+      }
+
+      h2:hover:before {
+        /* 提取属性值 */
+        content: attr(data-title);
+        color: white;
+        position: absolute;
+        background-color: #555;
+        padding: 5px;
+        left: 10px;
+        bottom: -30px;
+        box-shadow: 0 0 5px black;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 data-title="custom">baidu.com</h2>
+  </body>
+</html>
