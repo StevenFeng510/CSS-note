@@ -1,0 +1,19 @@
+p {
+  border: solid 1px #ddd;
+  padding: 10px;
+  overflow: hidden;
+
+  span.shape {
+    width: 100px;
+    height: 100px;
+    float: left;
+    // border: solid 20px red;
+    padding: 30px;
+    background: #555;
+    //显示区域变化
+    clip-path: circle(50%);
+    // clip-path: ellipse(20% 50%);
+    // clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    shape-outside: circle(50%);
+  }
+}
