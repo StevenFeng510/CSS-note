@@ -1,0 +1,47 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding-left: 100px;
+  padding-top: 150px;
+}
+
+article {
+  width: 150px;
+  position: relative;
+  cursor: pointer;
+
+  &:hover div:nth-of-type(1) {
+    border-bottom: none;
+    border-color: blueviolet;
+  }
+  &:hover div:nth-of-type(2) {
+    border-color: blueviolet;
+    display: block;
+  }
+
+  div {
+    height: 50px;
+    border: solid 1px #ddd;
+    text-align: center;
+    line-height: 3.5em;
+    font-size: 14px;
+
+    &:nth-of-type(1) {
+      background: white;
+      position: relative;
+      z-index: 2;
+    }
+
+    &:nth-of-type(2) {
+      width: 300px;
+      position: absolute;
+      right: 0;
+      top: 50px;
+      z-index: 1;
+      display: none;
+    }
+  }
+}
