@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      main {
+        position: relative;
+        height: 100vh;
+      }
+
+      main nav {
+        width: 80px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background: blueviolet;
+      }
+
+      main article {
+        background: #ccc;
+        padding-left: 90px;
+        background-clip: content-box;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <nav></nav>
+      <article>123</article>
+    </main>
+  </body>
+</html>

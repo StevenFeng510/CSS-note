@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        padding: 100px;
+      }
+
+      article {
+        border: solid 3px silver;
+        width: 350px;
+        display: flex;
+
+        /* 控制元素排列方向 */
+        /* flex-direction: row; */
+        /* 溢出时进行换行 */
+        /* flex-wrap: wrap-reverse; */
+
+        /* 统一设置换行 */
+        flex-flow: row wrap;
+        height: 200px;
+      }
+
+      article * {
+        width: 100px;
+        height: 100px;
+        background: blueviolet;
+        background-clip: content-box;
+        color: white;
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <div>123</div>
+      <div>123</div>
+      <div>1234</div>
+      <div>1234</div>
+      <div>12345</div>
+    </article>
+  </body>
+</html>

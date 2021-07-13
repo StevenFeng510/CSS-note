@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        padding: 100px;
+      }
+
+      article {
+        border: solid 3px silver;
+        height: 500px;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+
+      /*  分配可用空间*/
+      article div:nth-child(1) {
+        flex-grow: 0;
+      }
+
+      article div:nth-child(2) {
+        flex-grow: 1;
+      }
+      article div:nth-child(3) {
+        flex-grow: 3;
+      }
+
+      article div {
+        /* flex-grow: 1; */
+        width: 100px;
+        height: 100px;
+        background: blueviolet;
+        background-clip: content-box;
+        border: solid 1px silver;
+        color: white;
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <div>123</div>
+      <div>123</div>
+      <div>1234</div>
+    </article>
+  </body>
+</html>
