@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding-left: 50px;
+        padding-top: 15px;
+      }
+
+      article {
+        border: solid 5px #ddd;
+        width: 400px;
+        height: 500px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      article * {
+        background: blueviolet;
+        flex: 1;
+        background-clip: content-box;
+        padding: 10px;
+        font-size: 30px;
+        color: wheat;
+      }
+
+      article :nth-child(1) {
+        order: 1;
+      }
+
+      article :nth-child(2) {
+        order: -1;
+      }
+
+      article :nth-child(3) {
+        order: -11;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </article>
+  </body>
+</html>

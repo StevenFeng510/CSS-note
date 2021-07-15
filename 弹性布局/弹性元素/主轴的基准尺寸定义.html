@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        padding-left: 50px;
+        padding-top: 15px;
+      }
+      article {
+        border: solid 5px silver;
+        width: 500px;
+        height: 500px;
+        display: flex;
+        padding: 10px;
+        box-sizing: content-box;
+        flex-direction: column;
+      }
+
+      article div {
+        /* flex-basis的优先级高于width、height属性。 低于max/min等属性 */
+        flex-basis: 100px;
+
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        background: blueviolet;
+        background-clip: content-box;
+        padding: 10px;
+        border: solid 1px blueviolet;
+        box-sizing: border-box;
+        font-size: 30px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </article>
+  </body>
+</html>
