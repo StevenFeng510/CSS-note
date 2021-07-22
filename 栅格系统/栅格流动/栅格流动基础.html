@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+          article {
+            width: 300px;
+            height: 300px;
+            border: solid 2px silver;
+            display: grid;
+            /* 声明栅格系统的行 */
+            grid-template-rows: repeat(3, 1fr);
+            /* 声明栅格系统的列 */
+            grid-template-columns: repeat(3, 1fr);
+            /* 栅格流动处理 */
+            grid-auto-flow: row dense;
+          }
+          div {
+            background: blueviolet;
+            box-sizing: border-box;
+            background-clip: content-box;
+            /* border: solid 1px gray; */
+            padding: 10px;
+            font-size: 25px;
+            color: white;
+          }
+
+          div:nth-child(1) {
+            grid-column: 1 / span 2;
+          }
+        </style>
+      </head>
+      <body>
+        <article>
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+        </article>
+      </body>
+    </html>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      article {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 60px 1fr 60px;
+        grid-template-columns: 60px 1fr;
+        grid-template-areas:
+          "header header"
+          "nav main"
+          "footer footer";
+      }
+
+      header,
+      nav,
+      main,
+      footer {
+        background: blueviolet;
+        background-clip: content-box;
+        padding: 5px;
+      }
+
+      header {
+        grid-area: header;
+      }
+
+      nav {
+        grid-area: nav;
+      }
+
+      main {
+        grid-area: main;
+      }
+
+      footer {
+        grid-area: footer;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      footer div {
+        background: silver;
+        background-clip: content-box;
+        padding: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <header></header>
+      <nav></nav>
+      <main></main>
+      <footer>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </footer>
+    </article>
+  </body>
+</html>
