@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        list-style: none;
+      }
+
+      body {
+        background: #34495e;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      nav {
+        width: 400px;
+        height: 400px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      nav::before {
+        content: "爱你臭宝";
+        color: white;
+        position: absolute;
+        font-size: 2em;
+        z-index: 2;
+      }
+
+      nav::after {
+        content: "";
+        background: #e67e22;
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+      }
+
+      nav:hover ul {
+        transform: scale(1);
+      }
+
+      ul {
+        transition: 0.5s;
+        transform: scale(0);
+
+        /*  position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%); */
+        width: 300px;
+        height: 300px;
+        position: relative;
+      }
+
+      ul li {
+        width: 80px;
+        height: 80px;
+        background: #e74c3c;
+        border-radius: 50%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5em;
+        color: whitesmoke;
+        transition: 1s;
+        transform-origin: 150px 150px;
+      }
+
+      nav:hover li:nth-child(1) {
+        transform: rotate(40deg);
+      }
+
+      nav:hover li:nth-child(2) {
+        transform: rotate(80deg);
+      }
+
+      nav:hover li:nth-child(3) {
+        transform: rotate(120deg);
+      }
+
+      nav:hover li:nth-child(4) {
+        transform: rotate(160deg);
+      }
+
+      nav:hover li:nth-child(5) {
+        transform: rotate(200deg);
+      }
+
+      nav:hover li:nth-child(6) {
+        transform: rotate(240deg);
+      }
+
+      nav:hover li:nth-child(7) {
+        transform: rotate(280deg);
+      }
+
+      nav:hover li:nth-child(8) {
+        transform: rotate(320deg);
+      }
+
+      nav:hover li:nth-child(9) {
+        transform: rotate(360deg);
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <span><i class="fa fa-heart" aria-hidden="true"></i></span>
+        </li>
+        <li>
+          <span><i class="fa fa-heart" aria-hidden="true"></i></span>
+        </li>
+        <li>
+          <span><i class="fa fa-heart" aria-hidden="true"></i></span>
+        </li>
+        <li>
+          <span><i class="fa fa-heart" aria-hidden="true"></i></span>
+        </li>
+        <li>
+          <span><i class="fa fa-heart" aria-hidden="true"></i></span>
+        </li>
+        <li>
+          <span><i class="fa fa-heart" aria-hidden="true"></i></span>
+        </li>
+        <li>
+          <span><i class="fa fa-heart" aria-hidden="true"></i></span>
+        </li>
+        <li>
+          <span><i class="fa fa-heart" aria-hidden="true"></i></span>
+        </li>
+        <li>
+          <span><i class="fa fa-heart" aria-hidden="true"></i></span>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: #34495e;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      main {
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        position: relative;
+      }
+
+      .clock {
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        background: linear-gradient(to right, #ecf0f1, #2ecc71, #27ae60);
+        position: relative;
+        z-index: -2;
+      }
+
+      .clock::after {
+        content: "";
+        position: absolute;
+        width: 90%;
+        height: 90%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background: #1abc9c;
+        z-index: -11;
+      }
+
+      .line {
+        position: absolute;
+        width: 80%;
+        height: 80%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        /* background: #000; */
+      }
+
+      .line::before {
+        content: "";
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: 90%;
+        width: 90%;
+        border-radius: 50%;
+        background: #1abc9c;
+        position: absolute;
+        z-index: 2;
+      }
+
+      .line::after {
+        content: "";
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background: #fff;
+        position: absolute;
+        z-index: 2;
+      }
+
+      .line > div {
+        width: 8px;
+        background: #fff;
+        height: 100%;
+        position: absolute;
+        left: 50%;
+      }
+
+      .line > div:nth-of-type(1) {
+        transform: translateX(-50%) rotate(30deg);
+      }
+
+      .line > div:nth-of-type(2) {
+        transform: translateX(-50%) rotate(60deg);
+      }
+
+      .line > div:nth-of-type(3) {
+        transform: translateX(-50%) rotate(90deg);
+      }
+
+      .line > div:nth-of-type(4) {
+        transform: translateX(-50%) rotate(120deg);
+      }
+
+      .line > div:nth-of-type(5) {
+        transform: translateX(-50%) rotate(150deg);
+      }
+
+      .line > div:nth-of-type(6) {
+        transform: translateX(-50%) rotate(180deg);
+      }
+
+      .hour {
+        width: 8px;
+        background: #fff;
+        height: 20%;
+        bottom: 50%;
+        transform: translate(-50%);
+        position: absolute;
+        left: 50%;
+      }
+
+      .minute {
+        width: 5px;
+        background: #fff;
+        height: 40%;
+        bottom: 50%;
+        transform: translate(-50%);
+        position: absolute;
+        left: 50%;
+        transform: rotate(60deg);
+        transform-origin: bottom;
+      }
+
+      .second {
+        width: 1px;
+        background: #fff;
+        height: 40%;
+        bottom: 50%;
+        transform: translate(-50%);
+        position: absolute;
+        left: 50%;
+        transform: rotate(90deg);
+        transform-origin: bottom;
+        transition: 5s;
+      }
+
+      main:hover .second {
+        transform: translateX(-50%) rotate(-300deg);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="clock">
+        <div class="line">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="hour"></div>
+        <div class="minute"></div>
+        <div class="second"></div>
+      </div>
+    </main>
+  </body>
+</html>

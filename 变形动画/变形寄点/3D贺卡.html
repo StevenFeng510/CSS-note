@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #34495e;
+      }
+
+      .card {
+        width: 300px;
+        height: 200px;
+        background: #d35400;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+        color: whitesmoke;
+        position: relative;
+        transform-style: preserve-3d;
+        transform: perspective(900px) rotateX(45deg);
+      }
+
+      .card::before,
+      .card::after {
+        background: #e74c3c;
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        transition: 1s;
+      }
+
+      .card::before {
+        content: "aini";
+        left: 0;
+        top: 0;
+        justify-content: flex-end;
+        align-items: center;
+        transform-origin: left;
+      }
+
+      .card::after {
+        content: "choubao";
+        right: 0;
+        top: 0;
+        justify-content: flex-start;
+        align-items: center;
+        transform-origin: right;
+      }
+
+      .card:hover::before {
+        transform: rotateY(-180deg);
+      }
+
+      .card:hover::after {
+        transform: rotateY(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">baidu</div>
+  </body>
+</html>

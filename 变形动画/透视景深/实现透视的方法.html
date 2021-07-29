@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+        background: #34495e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      main {
+        display: flex;
+        /* 整体观察 */
+        /* perspective: 500px; */
+        border: solid 5px silver;
+        transform: perspective(500px) rotateY(45deg);
+      }
+
+      div {
+        width: 200px;
+        height: 200px;
+        background: #e67e22;
+        margin-right: 20px;
+        transform: rotateY(45deg);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div></div>
+      <div></div>
+    </main>
+  </body>
+</html>

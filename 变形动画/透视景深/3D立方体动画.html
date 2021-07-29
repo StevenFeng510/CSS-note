@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+        background: #34495e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      main {
+        display: flex;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        /* border: solid 5px silver; */
+        position: absolute;
+        transform-style: preserve-3d;
+        transform: perspective(900px) rotateX(-45deg);
+        transform-origin: center center 100px;
+        transition: 2s;
+      }
+
+      body:hover main {
+        transform: perspective(900px) rotateX(180deg) rotateY(178deg);
+      }
+
+      div {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        background: #27ae60;
+        font-size: 4em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform-origin: center center 100px;
+        opacity: 0.8;
+      }
+
+      div:nth-child(1) {
+        background: #8e44ad;
+        transform: rotateY(90deg);
+      }
+
+      div:nth-child(2) {
+        background: #95a5a6;
+        transform: rotateY(180deg);
+      }
+
+      div:nth-child(3) {
+        background: #e67e22;
+        transform: rotateY(270deg);
+      }
+
+      div:nth-child(4) {
+        transform: rotateY(360deg);
+      }
+
+      div:nth-child(5) {
+        background: #2980b9;
+        transform: rotateX(90deg);
+      }
+
+      div:nth-child(6) {
+        background: #16a085;
+        transform: rotateX(270deg);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </main>
+  </body>
+</html>

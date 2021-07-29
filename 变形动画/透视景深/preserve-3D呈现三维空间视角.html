@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 100vw;
+        height: 100vh;
+        background: #34495e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      main {
+        width: 400px;
+        height: 300px;
+        display: flex;
+        border: solid 5px silver;
+        position: relative;
+        transform-style: preserve-3d; /* 三维空间 */
+        transform: perspective(900px) rotateY(45deg);
+      }
+
+      div {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background: #e67e22;
+      }
+
+      div:nth-child(2) {
+        background: #ddd;
+        transform: translateZ(-300px);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div></div>
+      <div></div>
+    </main>
+  </body>
+</html>
