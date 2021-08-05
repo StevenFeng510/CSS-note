@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template: 1fr /1fr;
+      }
+
+      div {
+        width: 50px;
+        height: 50px;
+        background: red;
+        align-self: center;
+        justify-self: start;
+        color: #333;
+        /* currentColor 获取当前定义的颜色 */
+        box-shadow: 2px 0 5px currentColor;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

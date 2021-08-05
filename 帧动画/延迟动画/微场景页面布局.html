@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 10vh 1fr 10vh;
+      }
+
+      header {
+        background: #e67e22;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.3em;
+        color: white;
+        animation: anime 0.5s;
+      }
+
+      main {
+        background: url("../../10.jpg") no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        animation: rotate 0.5s;
+        animation-delay: 2s;
+        animation-fill-mode: backwards;
+      }
+
+      main div {
+        border-radius: 10px;
+        padding: 10px;
+        color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+      }
+
+      main div:nth-child(1) {
+        width: 80vw;
+        background: #2980b9;
+        opacity: 0.7;
+        transform: translateY(-50px);
+        animation: opacity 1s;
+        animation-delay: 3s;
+        animation-fill-mode: backwards;
+      }
+
+      main div:nth-child(2) {
+        background: #27ae60;
+        opacity: 0.7;
+        animation: opacity 1s;
+        animation-delay: 3.5s;
+        animation-fill-mode: backwards;
+      }
+
+      footer {
+        background: #34495e;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 1.3em;
+        transform: scale(0);
+        animation: rotate 0.5s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes anime {
+        from {
+          transform: translateX(-100vw);
+        }
+        to {
+          transform: translateX(0) scale(1);
+        }
+      }
+
+      @keyframes rotate {
+        from {
+          transform: scale(0) rotate(360deg);
+        }
+        to {
+          transform: scale(1) rotate(0);
+        }
+      }
+
+      @keyframes opacity {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 0.7;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>baidu</header>
+    <main>
+      <div>100,000 icons, illustrations and emoji for all your projects.</div>
+      <div>Customize them to your brand in seconds.</div>
+    </main>
+    <footer>demo</footer>
+  </body>
+</html>

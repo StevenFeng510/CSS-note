@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        background: #2c3e50;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        width: 100vw;
+        height: 100vh;
+        padding: 85px;
+      }
+
+      ul {
+        width: 800px;
+        height: 300px;
+        display: flex;
+        position: relative;
+      }
+
+      li {
+        flex: 1;
+        list-style: none;
+        border: solid 1px #ddd;
+        text-align: center;
+        color: white;
+      }
+
+      li::before {
+        content: "baidu.com";
+        opacity: 0.5;
+      }
+
+      ul::before {
+        content: "";
+        width: 200px;
+        height: 100px;
+        background: #e67e22;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition-duration: 2s;
+        /* 步进过渡效果 */
+        transition-timing-function: steps(4, start);
+      }
+
+      ul:hover::before {
+        transform: translateX(800px);
+      }
+
+      ul:hover::after {
+        transform: translateX(800px);
+      }
+
+      ul::after {
+        content: "";
+        width: 200px;
+        height: 100px;
+        left: 0;
+        bottom: 0;
+        background: #8e44ad;
+        position: absolute;
+        transition-duration: 2s;
+        /* 步进过渡效果 */
+        transition-timing-function: steps(4, end);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </main>
+  </body>
+</html>

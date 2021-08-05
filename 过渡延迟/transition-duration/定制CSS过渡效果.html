@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        background: #2c3e50;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        width: 100vw;
+        height: 100vh;
+        padding: 80px;
+      }
+
+      main {
+        width: 400px;
+        height: 400px;
+      }
+
+      div {
+        width: 150px;
+        height: 150px;
+        background-color: #9b59b6;
+        /* 单独控制需要变化的部分 */
+        /* transition-property: background, width, height; */
+        transition-duration: 2s;
+        margin-bottom: 10px;
+        border: solid 20px white;
+      }
+
+      div:first-child {
+        transition-property: all;
+      }
+
+      div:last-child {
+        transition-property: none;
+      }
+
+      main:hover div {
+        background-color: #ddd;
+        border-radius: 50%;
+        width: 400px;
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div></div>
+      <div></div>
+    </main>
+  </body>
+</html>

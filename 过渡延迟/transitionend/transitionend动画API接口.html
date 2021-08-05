@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        background: #2c3e50;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        width: 100vw;
+        height: 100vh;
+        padding: 80px;
+      }
+
+      main {
+        width: 200px;
+        height: 200px;
+      }
+
+      div {
+        width: 150px;
+        height: 150px;
+        position: relative;
+      }
+
+      div::before {
+        content: "abb";
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 10%;
+        font-size: 3em;
+        background: #ecf0f1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition-duration: 2s;
+        cursor: pointer;
+      }
+
+      div:hover::before {
+        transform: rotate(360deg);
+      }
+
+      div::after {
+        content: "baidu";
+        position: absolute;
+        bottom: -100px;
+        width: 200px;
+        text-align: center;
+        color: #fff;
+        font-size: 1.5em;
+        transform: translateX(-999px) skew(45deg);
+        transition-duration: 1s;
+      }
+
+      div.move::after {
+        transform: translateX(0px) skew(0deg);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div></div>
+      <script>
+        document
+          .querySelector("div")
+          .addEventListener("transitionend", function (e) {
+            document.querySelector("div").className = "move";
+          });
+      </script>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        width: 100vw;
+        height: 100vh;
+        background: #34495e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      main {
+        width: 400px;
+        height: 400px;
+        border: solid 1px #ddd;
+      }
+
+      div {
+        width: 100px;
+        height: 100px;
+        background: #e67e22;
+        animation-name: translate;
+        animation-duration: 2s;
+        /* 控制重复动画播放次数 */
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes translate {
+        25% {
+          transform: translateX(300px);
+        }
+        50% {
+          transform: translate(300px, 300px);
+        }
+        75% {
+          transform: translateY(300px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div></div>
+    </main>
+  </body>
+</html>

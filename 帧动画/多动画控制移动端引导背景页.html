@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        background: #2c3e50;
+      }
+
+      main {
+        width: 100vw;
+        height: 100vh;
+        background: #34495e;
+        transform: scale(0);
+        animation-name: scale, background, radius;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      main::after {
+        content: "demo示例 背景颜色变换";
+        font-size: 2em;
+        color: white;
+        opacity: 0;
+        animation-name: opacity;
+        animation-duration: 2s;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes opacity {
+        to {
+          opacity: 0.8;
+        }
+      }
+
+      @keyframes scale {
+        25% {
+          transform: scale(0.5);
+        }
+        50% {
+          transform: scale(1) rotate(360deg);
+        }
+        75% {
+          transform: scale(0.5);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      @keyframes background {
+        25% {
+          background: #9b59b6;
+          /* transform: translateX(300px); */
+        }
+        50% {
+          background: #2980b9;
+        }
+        75% {
+          background: #bdc3c7;
+        }
+        100% {
+          background: #c0392b;
+        }
+      }
+
+      @keyframes radius {
+        25% {
+          border-radius: 50%;
+        }
+        50% {
+          border-radius: 0;
+        }
+        75% {
+          border-radius: 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main></main>
+  </body>
+</html>

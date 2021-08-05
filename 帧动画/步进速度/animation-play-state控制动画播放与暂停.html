@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        background: #2c3e50;
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+      }
+
+      main {
+        align-self: center;
+        justify-self: center;
+        width: 400px;
+        height: 200px;
+        background: orange;
+        display: grid;
+        grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+      }
+
+      div {
+        text-align: center;
+        background: #f1c40f;
+        border: solid 1px #2c3e50;
+        position: relative;
+      }
+
+      div:nth-child(1)::before,
+      div:nth-child(5)::before {
+        animation: move 2s infinite;
+        z-index: 2;
+        animation-play-state: paused;
+      }
+
+      div:nth-child(1)::before {
+        content: "START";
+        width: 100px;
+        height: 100px;
+        background: #9b59b6;
+        position: absolute;
+        left: 0;
+        top: 0;
+        animation-timing-function: steps(4, start);
+      }
+
+      div:nth-child(5)::before {
+        content: "END";
+        width: 100px;
+        height: 100px;
+        background: rgb(67, 170, 67);
+        position: absolute;
+        left: 0;
+        top: 0;
+        animation-timing-function: steps(4, end);
+      }
+
+      @keyframes move {
+        to {
+          transform: translateX(400px);
+        }
+      }
+
+      main:hover div::before {
+        animation-play-state: running;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+    </main>
+  </body>
+</html>

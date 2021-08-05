@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template: 1fr /1fr;
+      }
+
+      button {
+        width: 200px;
+        height: 50px;
+        background: whitesmoke;
+        color: #34495e;
+        border: solid 1px #ddd;
+        justify-self: center;
+        align-self: center;
+        cursor: pointer;
+      }
+
+      button::after {
+        content: "";
+        height: 3px;
+        width: 3px;
+        display: inline-block;
+        animation: move 1s infinite;
+      }
+
+      @keyframes move {
+        from {
+          box-shadow: none;
+        }
+        30% {
+          box-shadow: 3px 0 0 currentColor;
+        }
+        60% {
+          box-shadow: 3px 0 0 currentColor, 9px 0 0 currentColor;
+        }
+        90% {
+          box-shadow: 3px 0 0 currentColor, 9px 0 0 currentColor,
+            15px 0 0 currentColor;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button>提交</button>
+  </body>
+</html>
