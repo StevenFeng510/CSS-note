@@ -1,0 +1,99 @@
+header {
+  border-bottom: solid 3px #95a5a6;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+
+  .navbar {
+    display: flex;
+    padding: 1rem 0;
+    align-items: center;
+
+    .logo {
+      color: #27ae60;
+      font-weight: bold;
+      margin-right: 10px;
+      font-size: 1.3rem;
+      & + label {
+        display: none;
+        & + input {
+          display: none;
+        }
+      }
+    }
+
+    .collapse {
+      display: flex;
+      flex-grow: 1;
+
+      .links {
+        display: flex;
+        margin-right: auto;
+
+        li {
+          margin: 0 10px;
+        }
+
+        a {
+          color: #777;
+
+          &:hover {
+            color: #333;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    .form {
+      a {
+        border: solid 1px #16a085;
+        border-radius: 0.3rem;
+        padding: 0.3rem 1rem;
+        color: #16a085;
+        &.form-bg {
+          background: #16a085;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+// 宽度小于960px的屏幕下的样式
+@media only screen and (max-width: 960px) {
+  header {
+    .navbar {
+      flex-flow: row wrap;
+
+      .logo {
+        margin-right: auto;
+
+        & + label {
+          display: block;
+          border: solid 1px #ddd;
+          padding: 0.5em 1rem;
+          color: #555;
+          cursor: pointer;
+
+          & + input:checked {
+            & + .collapse {
+              display: block;
+            }
+          }
+        }
+      }
+
+      .collapse {
+        display: none;
+        width: 100%;
+        flex-flow: column;
+
+        .links {
+          flex-flow: column;
+          margin-bottom: 1.5rem;
+          li {
+            margin: 0.5rem 0;
+          }
+        }
+      }
+    }
+  }
+}
